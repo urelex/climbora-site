@@ -54,7 +54,7 @@
   "logo": "https://climboradigital.com/favicon.svg",
   "image": "https://climboradigital.com/og-image.png",
   "email": "ioangolemi01@gmail.com",
-  "priceRange": "$$",
+  "priceRange": "$",
   "areaServed": {
     "@type": "Country",
     "name": "Canada"
@@ -81,6 +81,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Technical fixes can show up in weeks, but meaningful ranking and traffic gains typically take three to six months. Anyone promising page-one rankings in 30 days is either guessing or gaming something that will get penalised later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The audit itself is free. If you decide to move forward afterward, ongoing SEO packages start at $59/month, with exact scope depending on your site size and how competitive your market is."
       }
     },
     {
@@ -1101,11 +1109,14 @@
             the person doing the work and the person you email when you have a question.
             No account manager in between, no junior handoff.
           </p>
+          <!-- ⚠️ This paragraph is a starting draft, not a final bio — see the note in
+               PROJECT_CONTEXT.md. It deliberately does NOT invent an employer, years of
+               experience, or past clients you don't have. Edit it freely; just keep it true. -->
           <p>
-            <!-- ⚠️ TODO: 2–3 honest sentences about your actual background and why you
-                 started this. Don't invent credentials — specifics beat polish here. -->
-            [ADD YOUR BACKGROUND — what you did before this, what got you into SEO, and
-            why you started Climbora. Two or three plain sentences is plenty.]
+            I'm self-taught — I learned SEO the same way I imagine a lot of you built your
+            own businesses: by doing it, breaking things, and figuring out what actually
+            moves the needle instead of what sounds good in a sales deck. Climbora Digital
+            is my first agency, built from scratch rather than inherited from a past job.
           </p>
           <p>
             I'm building this deliberately slowly and taking on a small number of clients
@@ -1140,10 +1151,7 @@
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">What does it cost?</button>
           <div class="faq-a">
-            <!-- ⚠️ TODO: replace with your actual pricing or a real starting range.
-                 Even a rough "projects start at $X/month" filters out tire-kickers
-                 before they take up calendar time. -->
-            <p>[ADD PRICING — e.g. "Ongoing SEO starts at $X/month, and one-off audits are $Y. Exact scope depends on your site size and how competitive your market is — you'll get a fixed number before anything starts, never an open-ended bill."]</p>
+            <p>The audit itself is free. If you decide to move forward afterward, ongoing SEO packages start at $59/month — exact scope depends on your site size and how competitive your market is, and you'll get a fixed number before anything starts.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -1203,20 +1211,12 @@
              so no dead link ever ships. -->
         <a href="#contact" class="btn btn-ghost booking-cta" data-cta="book" id="booking-cta">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Book a 15-minute call
+          Book a 30-minute call
         </a>
       </div>
 
-      <!--
-        TO ACTIVATE THIS FORM (about 5 minutes):
-        1. Create a free account at https://formspree.io and add a new form.
-        2. Copy the form ID it gives you (looks like: xayzbwqd).
-        3. Replace YOUR_FORM_ID in the action="" below with it.
-        That's the only change needed — the script auto-detects it and stops
-        blocking submissions once the placeholder is gone.
-      -->
       <form id="contact-form" class="reveal"
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="https://formspree.io/f/mjybaqdy"
             method="POST">
         <div class="field">
           <label for="name">Name</label>
@@ -1285,7 +1285,7 @@
   // "Book a Free Audit" button will point straight at your calendar
   // instead of scrolling to the contact form.
   // Example: 'https://cal.com/ioan/free-seo-audit'
-  var BOOKING_URL = '';
+  var BOOKING_URL = 'https://cal.com/xecutiv/30min';
 
   /* ============================================================ */
 
@@ -1296,7 +1296,7 @@
       el.target = '_blank';
       el.rel = 'noopener';
     });
-    // Reveal the "Book a 15-minute call" link in the contact column
+    // Reveal the "Book a 30-minute call" link in the contact column
     var bookingCta = document.getElementById('booking-cta');
     if (bookingCta) bookingCta.classList.add('is-active');
   }
