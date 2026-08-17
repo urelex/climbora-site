@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js-ready');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Climbora Digital — SEO That Gets You Found</title>
+<meta name="description" content="Climbora Digital helps businesses climb search rankings and turn more visitors into paying customers. Free SEO audit, no long-term contracts.">
+<link rel="canonical" href="https://climboradigital.com/">
+<meta name="theme-color" content="#0A0A0A">
+
+<!-- Favicon -->
+<!-- Relative, not "/favicon.svg" — absolute paths 404 on GitHub Pages' project
+     URL (username.github.io/climbora-site/). Relative works on both that and
+     the custom domain, so don't "tidy" these back to leading slashes. -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+
+<!-- Open Graph (LinkedIn, Facebook, WhatsApp, Slack…) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://climboradigital.com/">
+<meta property="og:site_name" content="Climbora Digital">
+<meta property="og:title" content="Climbora Digital — SEO That Gets You Found">
+<meta property="og:description" content="SEO built for real growth, not vanity metrics. Free audit, no long-term contracts.">
+<!-- ⚠️ TODO: export og-image.svg to og-image.png (1200x630) — social platforms don't render SVG -->
+<meta property="og:image" content="https://climboradigital.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Climbora Digital — Get found first. Get chosen more.">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Climbora Digital — SEO That Gets You Found">
+<meta name="twitter:description" content="SEO built for real growth, not vanity metrics. Free audit, no long-term contracts.">
+<meta name="twitter:image" content="https://climboradigital.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!--
+  Structured data — helps Google understand what this business is.
+  ⚠️ TODO: add real profile URLs to "sameAs" once social handles are claimed.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://climboradigital.com/#business",
+  "name": "Climbora Digital",
+  "description": "SEO and search visibility agency helping businesses climb search rankings and turn more visitors into paying customers.",
+  "url": "https://climboradigital.com/",
+  "logo": "https://climboradigital.com/favicon.svg",
+  "image": "https://climboradigital.com/og-image.png",
+  "email": "ioangolemi01@gmail.com",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": [
+    "Search Engine Optimization",
+    "Technical SEO",
+    "Local SEO",
+    "On-Page SEO and Content Strategy"
+  ],
+  "sameAs": []
+}
+</script>
+
+<!-- FAQ structured data — can earn expanded results in Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does SEO take to show results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technical fixes can show up in weeks, but meaningful ranking and traffic gains typically take three to six months. Anyone promising page-one rankings in 30 days is either guessing or gaming something that will get penalised later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to sign a long-term contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Engagements are month-to-month by default. SEO does need a few months to compound, so we will be upfront about that timeline, but you are never locked in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I actually receive each month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The work implemented that month, plus a plain-language report covering rankings, organic traffic, and leads, along with what is planned next."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only work with local businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Local service businesses, national brands, e-commerce, and online-only businesses are all a fit. The strategy changes based on how you actually acquire customers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens in the free audit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We review your site's technical health, current rankings, and closest competitors, then walk you through the highest-impact fixes. You keep the findings whether or not you decide to work with us."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --ink-soft: #52525B;
+    --line: #E4E4E7;
+    --bg: #FFFFFF;
+    --bg-alt: #F8F8F8;
+    --accent: #0A0A0A;
+    --accent-dark: #000000;
+    --accent-soft: #F1F1F1;
+    --radius: 14px;
+    --max: 1120px;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    /* Seamless topographic tile (420x220).
+       Each path starts and ends at the SAME y with the SAME tangent, so tiles
+       butt together with no visible jump. Lines are spaced a uniform 44px,
+       including across the tile boundary (198 -> 220+22), so the vertical
+       rhythm stays even too. Don't shift a single y value without redoing both. */
+    --contour: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220'%3E%3Cg fill='none' stroke='%230A0A0A' stroke-opacity='0.05' stroke-width='1'%3E%3Cpath d='M0 22 Q 105 2 210 22 T 420 22'/%3E%3Cpath d='M0 66 Q 105 82 210 66 T 420 66'/%3E%3Cpath d='M0 110 Q 105 88 210 110 T 420 110'/%3E%3Cpath d='M0 154 Q 105 168 210 154 T 420 154'/%3E%3Cpath d='M0 198 Q 105 180 210 198 T 420 198'/%3E%3C/g%3E%3C/svg%3E");
+    --contour-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220'%3E%3Cg fill='none' stroke='%230A0A0A' stroke-opacity='0.04' stroke-width='1'%3E%3Cpath d='M0 22 Q 105 2 210 22 T 420 22'/%3E%3Cpath d='M0 66 Q 105 82 210 66 T 420 66'/%3E%3Cpath d='M0 110 Q 105 88 210 110 T 420 110'/%3E%3Cpath d='M0 154 Q 105 168 210 154 T 420 154'/%3E%3Cpath d='M0 198 Q 105 180 210 198 T 420 198'/%3E%3C/g%3E%3C/svg%3E");
+    --contour-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M0 22 Q 105 2 210 22 T 420 22'/%3E%3Cpath d='M0 66 Q 105 82 210 66 T 420 66'/%3E%3Cpath d='M0 110 Q 105 88 210 110 T 420 110'/%3E%3Cpath d='M0 154 Q 105 168 210 154 T 420 154'/%3E%3Cpath d='M0 198 Q 105 180 210 198 T 420 198'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* Keyboard focus — visible for keyboard users, invisible for mouse users */
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .cta-band a:focus-visible { outline-color: #fff; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Nav ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+    white-space: nowrap;
+  }
+  .btn:active {
+    transform: translateY(0) scale(0.97) !important;
+    transition-duration: 0.1s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+  .btn-primary:hover {
+    background: #2A2A2A;
+    transform: translateY(-2px) scale(1.015);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  }
+  .btn-ghost {
+    /* Solid, not transparent — this button sits over the hero's contour pattern,
+       and a transparent fill lets the wavy lines run straight through it. */
+    background: var(--bg);
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-ghost:hover {
+    border-color: var(--ink);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+  }
+  .btn-sm { padding: 10px 18px; font-size: 14px; }
+
+  .menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 24px 20px;
+    border-top: 1px solid var(--line);
+    background: #fff;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 12px 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .mobile-menu a:last-of-type { border-bottom: none; }
+  .mobile-menu .btn { margin-top: 8px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 96px 0 80px;
+    background:
+      radial-gradient(700px circle at 85% -10%, var(--accent-soft), transparent 60%),
+      var(--contour);
+    background-repeat: no-repeat, repeat;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 7px solid var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin-bottom: 22px;
+  }
+  h1 .accent {
+    background: var(--ink);
+    color: #fff;
+    padding: 2px 14px 6px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .hero p.lead {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .hero-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-note svg { flex-shrink: 0; color: var(--accent); }
+
+  /* Chart visual */
+  .chart-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .chart-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 18px;
+  }
+  .chart-card-head .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .chart-card-head .value {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-dark);
+  }
+  .chart-card svg { width: 100%; height: auto; }
+  .chart-card polyline {
+    transition: stroke-dashoffset 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .chart-card polygon { transition: opacity 1s ease 0.5s; }
+  .js-ready .chart-card polygon { opacity: 0; }
+  .js-ready .chart-card.in-view polygon { opacity: 1; }
+
+  /* ---------- Stats ---------- */
+  .stats {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-alt);
+    padding: 40px 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: var(--font-mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-dark);
+    letter-spacing: -0.01em;
+  }
+  .stat-label {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  /* ---------- Section shared ---------- */
+  section { padding: 96px 0; }
+  .section-head {
+    max-width: 620px;
+    margin: 0 auto 56px;
+    text-align: center;
+  }
+  .section-head .eyebrow { margin-bottom: 16px; }
+  h2 {
+    font-size: clamp(28px, 3.4vw, 38px);
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal { transition: opacity 0.65s ease, transform 0.65s ease; }
+  .js-ready .reveal { opacity: 0; transform: translateY(22px); }
+  .js-ready .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .services-grid .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .services-grid .reveal:nth-child(3) { transition-delay: 0.16s; }
+  .services-grid .reveal:nth-child(4) { transition-delay: 0.24s; }
+  .process-grid .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .process-grid .reveal:nth-child(3) { transition-delay: 0.16s; }
+  .process-grid .reveal:nth-child(4) { transition-delay: 0.24s; }
+  .why-grid .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .why-grid .reveal:nth-child(3) { transition-delay: 0.16s; }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .service-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    background: var(--bg);
+    transition: box-shadow 0.15s ease, transform 0.15s ease, opacity 0.65s ease;
+  }
+  .service-card:hover {
+    box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+    transform: translateY(-3px);
+  }
+  .js-ready .service-card.reveal:hover { transform: translateY(-3px); }
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    clip-path: polygon(22% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 22%);
+  }
+  .service-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .service-card p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Process ---------- */
+  .process-alt {
+    background: var(--bg-alt) var(--contour-light);
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  .process-step {
+    padding: 0 20px;
+    position: relative;
+  }
+  .process-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -14px;
+    width: 26px;
+    height: 2px;
+    background-image: repeating-linear-gradient(90deg, var(--ink-soft) 0 5px, transparent 5px 9px);
+    transform: rotate(-22deg);
+    transform-origin: left center;
+  }
+  @media (min-width: 901px) {
+    .process-step:nth-child(2) { transform: translateY(-12px); }
+    .process-step:nth-child(3) { transform: translateY(-24px); }
+    .process-step:nth-child(4) { transform: translateY(-36px); }
+  }
+  .process-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .process-step h3 {
+    font-size: 16.5px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .process-step p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Why us ---------- */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .why-card { padding: 4px; }
+  .why-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .why-icon {
+    width: 30px;
+    height: 30px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 24%);
+  }
+  .why-card p { color: var(--ink-soft); font-size: 15px; }
+
+  /* ---------- Founder ---------- */
+  .founder-alt { background: var(--bg-alt) var(--contour-light); }
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .founder-photo {
+    width: 260px;
+    height: 260px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 14%);
+  }
+  .founder-photo .initials {
+    font-family: var(--font-mono);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .founder-photo .photo-note {
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 0 16px;
+    line-height: 1.4;
+  }
+  .founder-body h2 { margin-bottom: 6px; }
+  .founder-role {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .founder-body p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .founder-body p:last-of-type { margin-bottom: 24px; }
+  .founder-sign {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line);
+  }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    padding: 22px 44px 22px 0;
+    cursor: pointer;
+    position: relative;
+    display: block;
+  }
+  .faq-q::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    border-right: 2px solid var(--ink-soft);
+    border-bottom: 2px solid var(--ink-soft);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .faq-item.open .faq-q::after { transform: translateY(-20%) rotate(-135deg); }
+  .faq-a {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .faq-item.open .faq-a { max-height: 400px; }
+  .faq-a p {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    padding: 0 44px 24px 0;
+  }
+  /* No-JS fallback: all answers visible if the script never runs */
+  html:not(.js-ready) .faq-a { max-height: none; }
+
+  /* ---------- CTA band ---------- */
+  .cta-band {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 24px;
+    padding: 64px 48px;
+    text-align: center;
+    margin: 0 24px;
+  }
+  .cta-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--contour-dark);
+    pointer-events: none;
+  }
+  .cta-band > * { position: relative; z-index: 1; }
+  .cta-band h2 { color: #fff; }
+  .cta-band p { color: #A1A1AA; max-width: 480px; margin: 0 auto 32px; font-size: 17px; }
+  .cta-band .btn-primary { background: #fff; color: var(--ink); }
+  .cta-band .btn-primary:hover { background: #E4E4E7; }
+
+  /* ---------- Contact ---------- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .contact-info h2 { margin-bottom: 14px; }
+  .contact-info p { color: var(--ink-soft); font-size: 16px; margin-bottom: 28px; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .contact-item svg { color: var(--accent); flex-shrink: 0; }
+  a.contact-item { transition: color 0.2s ease; }
+  a.contact-item:hover { color: var(--ink-soft); }
+  /* Booking CTA is revealed by JS only once BOOKING_URL is configured */
+  .booking-cta { display: none; margin-top: 10px; }
+  .booking-cta.is-active { display: inline-flex; }
+
+  form {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--ink-soft);
+  }
+  .field input, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    font-family: inherit;
+    font-size: 15px;
+    background: #fff;
+  }
+  .field input:focus, .field textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .field textarea { resize: vertical; min-height: 100px; }
+  form .btn { width: 100%; margin-top: 4px; }
+  .form-note { font-size: 12.5px; color: var(--ink-soft); text-align: center; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 0 32px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .footer-social { display: flex; gap: 14px; }
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+  }
+  .footer-social a:hover { color: var(--accent); border-color: var(--accent); }
+  .footer-bottom {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ---------- Scroll progress ---------- */
+  .scroll-progress {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--ink);
+    z-index: 200;
+    transition: width 0.1s linear;
+  }
+  .js-ready .scroll-progress { display: block; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+    .process-step:nth-child(2)::after { display: none; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .founder-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      justify-items: center;
+      text-align: center;
+    }
+    .founder-sign { justify-content: center; }
+  }
+
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+    .nav-cta .btn-primary.btn-sm { display: none; }
+    .menu-toggle { display: inline-flex; cursor: pointer; }
+    .services-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-step::after { display: none; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .cta-band { padding: 48px 24px; margin: 0 16px; }
+    section { padding: 64px 0; }
+    .founder-photo { width: 200px; height: 200px; }
+    .founder-photo .initials { font-size: 44px; }
+  }
+
+  /* ---------- Reduced motion ----------
+     Respects the OS "reduce motion" setting (vestibular disorders, migraine
+     triggers). Everything still displays — it just arrives without movement. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .js-ready .reveal { opacity: 1 !important; transform: none !important; }
+    .js-ready .chart-card polygon { opacity: 1 !important; }
+    .btn:hover { transform: none !important; }
+    .service-card:hover { transform: none !important; }
+    .process-step:nth-child(2),
+    .process-step:nth-child(3),
+    .process-step:nth-child(4) { transform: none !important; }
+    .faq-item.open .faq-a { max-height: 400px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<header>
+  <nav>
+    <a href="#top" class="logo">Climbora<span>Digital</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary btn-sm" data-cta="book">Book a Free Audit</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary btn-sm" data-cta="book">Book a Free Audit</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" style="padding-top:64px;">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">SEO &amp; Search Visibility</div>
+        <h1>Get found first.<br>Get chosen <span class="accent">more.</span></h1>
+        <p class="lead">
+          Climbora Digital helps businesses climb search rankings and turn more visitors
+          into paying customers — through SEO built for real growth, not vanity metrics.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-cta="book">Book a Free SEO Audit</a>
+          <a href="#process" class="btn btn-ghost">See How It Works</a>
+        </div>
+        <div class="hero-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          No long-term contracts &nbsp;·&nbsp; Clear, honest reporting
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <span class="label">Ranking Progress</span>
+          <span class="value">+142%</span>
+        </div>
+        <svg viewBox="0 0 320 140" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0A0A0A" stop-opacity="0.22"/>
+              <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <polyline points="0,120 40,110 80,118 120,90 160,95 200,60 240,50 280,28 320,15"
+            fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="0,120 40,110 80,118 120,90 160,95 200,60 240,50 280,28 320,15 320,140 0,140"
+            fill="url(#grad)"/>
+        </svg>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--ink-soft);margin-top:8px;">
+          <span>Month 1</span><span>Month 6</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <!-- PLACEHOLDER: verify these industry stats and cite sources before publishing -->
+  <div class="stats">
+    <div class="wrap stats-grid">
+      <div>
+        <div class="stat-num" data-target="93" data-suffix="%" data-decimals="0">93%</div>
+        <div class="stat-label">of online experiences start with a search engine</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="75" data-suffix="%" data-decimals="0">75%</div>
+        <div class="stat-label">of users never scroll past page one of results</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="8.5" data-suffix="x" data-decimals="1">8.5x</div>
+        <div class="stat-label">higher close rate for SEO leads vs. outbound</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What We Do</div>
+        <h2>SEO built around how your business actually grows</h2>
+        <p>Whether you're a local shop or an online-only brand, we build the strategy around your customers — not a one-size-fits-all package.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+          <h3>SEO Audits &amp; Strategy</h3>
+          <p>A clear picture of where you stand today and a prioritized roadmap for what to fix first.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg>
+          </div>
+          <h3>Technical SEO</h3>
+          <p>Fix the site-speed, crawlability, and structural issues quietly capping your rankings.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <h3>On-Page &amp; Content</h3>
+          <p>Pages and content structured to rank for what your customers are actually searching.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Local SEO</h3>
+          <p>Show up when nearby customers search for what you offer — maps, listings, and reviews included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section id="process" class="process-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">How It Works</div>
+        <h2>From audit to results — no guesswork</h2>
+        <p>A simple, transparent process so you always know what we're doing and why.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="process-num">1</div>
+          <h3>Free Audit</h3>
+          <p>We analyze your current site, rankings, and competitors — no cost, no obligation.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-num">2</div>
+          <h3>Strategy</h3>
+          <p>A custom SEO roadmap built around your goals, market, and budget.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-num">3</div>
+          <h3>Execution</h3>
+          <p>We implement the technical, on-page, and content fixes that move the needle.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-num">4</div>
+          <h3>Reporting</h3>
+          <p>Monthly reports tied to rankings, traffic, and leads — not vanity metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY US ===================== -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Why Climbora</div>
+        <h2>What working with us looks like</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <h3>
+            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>
+            Transparent reporting
+          </h3>
+          <p>You see rankings, traffic, and lead data every month — plain numbers, no smoke and mirrors.</p>
+        </div>
+        <div class="why-card reveal">
+          <h3>
+            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l6-6M3 21v-6h6"/><path d="M21 3l-6 6M21 3v6h-6"/></svg></span>
+            Built for any business
+          </h3>
+          <p>Local, national, e-commerce, or service-based — the strategy adapts to how you actually get customers.</p>
+        </div>
+        <div class="why-card reveal">
+          <h3>
+            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
+            No long-term lock-in
+          </h3>
+          <p>Month-to-month by default. You stay because the work is paying off — not because you signed something.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOUNDER / ABOUT =====================
+       ⚠️ TODO: replace the bracketed placeholders below with your real background,
+       and swap the initials block for an actual photo. A real face is the single
+       biggest trust lever you have before you have case studies. -->
+  <section id="about" class="founder-alt">
+    <div class="wrap">
+      <div class="founder-grid">
+        <div class="founder-photo reveal">
+          <!-- Replace this whole block with: <img src="founder.jpg" alt="Ioan, founder of Climbora Digital"> -->
+          <span class="initials">IG</span>
+          <span class="photo-note">Add a real photo here<br>(headshot, 600×600 or larger)</span>
+        </div>
+        <div class="founder-body reveal">
+          <div class="eyebrow">Who You're Working With</div>
+          <h2>Hi, I'm Ioan</h2>
+          <div class="founder-role">Founder · Climbora Digital</div>
+          <p>
+            Climbora Digital is founder-led, which means the person auditing your site is
+            the person doing the work and the person you email when you have a question.
+            No account manager in between, no junior handoff.
+          </p>
+          <p>
+            <!-- ⚠️ TODO: 2–3 honest sentences about your actual background and why you
+                 started this. Don't invent credentials — specifics beat polish here. -->
+            [ADD YOUR BACKGROUND — what you did before this, what got you into SEO, and
+            why you started Climbora. Two or three plain sentences is plenty.]
+          </p>
+          <p>
+            I'm building this deliberately slowly and taking on a small number of clients
+            at a time, so the work stays hands-on rather than templated.
+          </p>
+          <div class="founder-sign">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            You'll always deal with me directly
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ =====================
+       These answers are matched by the FAQPage JSON-LD in <head>. If you change
+       the wording here, update the schema block too so they stay in sync. -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Questions</div>
+        <h2>Straight answers to the usual questions</h2>
+        <p>If something isn't covered here, just ask — the answer will be as direct as these.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">How long does SEO take to show results?</button>
+          <div class="faq-a">
+            <p>Technical fixes can show up within weeks, but meaningful ranking and traffic gains typically take three to six months. Anyone promising you page one in 30 days is either guessing or gaming something that gets penalised later — and you'd be the one left holding that.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">What does it cost?</button>
+          <div class="faq-a">
+            <!-- ⚠️ TODO: replace with your actual pricing or a real starting range.
+                 Even a rough "projects start at $X/month" filters out tire-kickers
+                 before they take up calendar time. -->
+            <p>[ADD PRICING — e.g. "Ongoing SEO starts at $X/month, and one-off audits are $Y. Exact scope depends on your site size and how competitive your market is — you'll get a fixed number before anything starts, never an open-ended bill."]</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Do I have to sign a long-term contract?</button>
+          <div class="faq-a">
+            <p>No — engagements are month-to-month by default. SEO does need a few months to compound, and I'll be upfront with you about that timeline before we start, but you're never locked in.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">What do I actually get each month?</button>
+          <div class="faq-a">
+            <p>The work implemented that month, plus a plain-language report covering rankings, organic traffic, and leads — and what's queued next. No 40-page PDF of charts you'll never read.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Do you only work with local businesses?</button>
+          <div class="faq-a">
+            <p>No. Local service businesses, national brands, e-commerce, and online-only businesses are all a fit. What changes is the strategy — local SEO leans on maps, listings, and reviews, while an online-only brand leans harder on content and technical work.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">What happens in the free audit?</button>
+          <div class="faq-a">
+            <p>I review your site's technical health, current rankings, and closest competitors, then walk you through the highest-impact fixes. You keep the findings either way — if you'd rather hand them to someone else or do them yourself, that's genuinely fine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section style="padding-top:0;">
+    <div class="cta-band">
+      <h2>Ready to climb the rankings?</h2>
+      <p>Get a free, no-obligation audit of your website's current SEO performance and what's holding it back.</p>
+      <a href="#contact" class="btn btn-primary" data-cta="book">Book Your Free Audit</a>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Get In Touch</div>
+        <h2>Let's talk about your website</h2>
+        <p>Tell us a bit about your business and you'll get your free audit — no pitch, no obligation.</p>
+        <a class="contact-item" href="mailto:ioangolemi01@gmail.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          ioangolemi01@gmail.com
+        </a>
+        <div class="contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          Replies within one business day
+        </div>
+
+        <!-- Booking CTA — stays hidden until BOOKING_URL is set in the script below,
+             so no dead link ever ships. -->
+        <a href="#contact" class="btn btn-ghost booking-cta" data-cta="book" id="booking-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Book a 15-minute call
+        </a>
+      </div>
+
+      <!--
+        TO ACTIVATE THIS FORM (about 5 minutes):
+        1. Create a free account at https://formspree.io and add a new form.
+        2. Copy the form ID it gives you (looks like: xayzbwqd).
+        3. Replace YOUR_FORM_ID in the action="" below with it.
+        That's the only change needed — the script auto-detects it and stops
+        blocking submissions once the placeholder is gone.
+      -->
+      <form id="contact-form" class="reveal"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required>
+        </div>
+        <div class="field">
+          <label for="website">Website URL</label>
+          <input id="website" name="website" type="text" autocomplete="url" placeholder="yourbusiness.com">
+        </div>
+        <div class="field">
+          <label for="message">What are you hoping to improve?</label>
+          <textarea id="message" name="message" placeholder="Tell us a bit about your business and goals"></textarea>
+        </div>
+        <!-- Spam honeypot: hidden from people, bots fill it in and get rejected -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+               aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+        <input type="hidden" name="_subject" value="New free audit request — climboradigital.com">
+        <button type="submit" class="btn btn-primary">Request Free Audit</button>
+        <p class="form-note" id="form-note">This form doesn't send anywhere yet — add your Formspree ID in the code to activate it.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="#top" class="logo">Climbora<span>Digital</span></a>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <!--
+        SOCIAL ICONS — removed because all three pointed at "#", and dead links
+        read worse than no links. To restore: claim the handles, paste the block
+        below back in, swap each href for the real profile URL, and also add
+        those URLs to the "sameAs" array in the JSON-LD schema in <head>.
+
+        <div class="footer-social">
+          <a href="https://instagram.com/YOURHANDLE" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://linkedin.com/company/YOURHANDLE" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4V8h4v2a6 6 0 014-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://x.com/YOURHANDLE" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      -->
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Climbora Digital. All rights reserved.</span>
+      <span>Made to climb.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     CONFIG — the two things to fill in before launch
+     ============================================================ */
+
+  // Paste your Cal.com / Calendly / SavvyCal link here and every
+  // "Book a Free Audit" button will point straight at your calendar
+  // instead of scrolling to the contact form.
+  // Example: 'https://cal.com/ioan/free-seo-audit'
+  var BOOKING_URL = '';
+
+  /* ============================================================ */
+
+  // Point all booking CTAs at the calendar link, if one is set
+  if (BOOKING_URL) {
+    document.querySelectorAll('[data-cta="book"]').forEach(function (el) {
+      el.href = BOOKING_URL;
+      el.target = '_blank';
+      el.rel = 'noopener';
+    });
+    // Reveal the "Book a 15-minute call" link in the contact column
+    var bookingCta = document.getElementById('booking-cta');
+    if (bookingCta) bookingCta.classList.add('is-active');
+  }
+
+  // Respect the OS "reduce motion" setting
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form — blocks submission only while the Formspree ID is still a placeholder
+  var contactForm = document.getElementById('contact-form');
+  var formNote = document.getElementById('form-note');
+  var formIsWired = contactForm.getAttribute('action').indexOf('YOUR_FORM_ID') === -1;
+
+  if (formIsWired) {
+    // Real endpoint present — let the browser submit normally, and hide the warning note
+    if (formNote) formNote.style.display = 'none';
+  } else {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('This form isn\'t connected yet.\n\nAdd your Formspree form ID to the action="" attribute in index.html to start receiving submissions.');
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+
+  // Mobile menu toggle
+  var menuToggle = document.getElementById('menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', function () {
+    var isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll progress bar
+  var scrollProgress = document.getElementById('scroll-progress');
+  function updateScrollProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  window.addEventListener('resize', updateScrollProgress);
+  updateScrollProgress();
+
+  // Scroll reveal — fades/slides sections in as they enter the viewport
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+  // Animated stat counters
+  function animateCount(el) {
+    var target = parseFloat(el.dataset.target);
+    var suffix = el.dataset.suffix || '';
+    var decimals = el.dataset.decimals ? parseInt(el.dataset.decimals, 10) : 0;
+    // Reduced motion: show the final number immediately, no count-up
+    if (prefersReducedMotion) {
+      el.textContent = target.toFixed(decimals) + suffix;
+      return;
+    }
+    var duration = 1200;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (target * eased).toFixed(decimals) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var statEls = document.querySelectorAll('.stat-num[data-target]');
+  var statObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  statEls.forEach(function (el) { statObserver.observe(el); });
+
+  // Chart line draws itself in on scroll
+  var chartCard = document.querySelector('.chart-card');
+  var chartLine = document.querySelector('.chart-card polyline');
+  if (chartCard && chartLine && prefersReducedMotion) {
+    // Reduced motion: draw the chart fully, skip the line animation
+    chartCard.classList.add('in-view');
+  } else if (chartCard && chartLine) {
+    var lineLength = chartLine.getTotalLength();
+    chartLine.style.strokeDasharray = lineLength;
+    chartLine.style.strokeDashoffset = lineLength;
+    var chartObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          chartLine.style.strokeDashoffset = 0;
+          chartCard.classList.add('in-view');
+          chartObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    chartObserver.observe(chartCard);
+  }
+</script>
+
+</body>
+</html>

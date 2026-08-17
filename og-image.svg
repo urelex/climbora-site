@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!--
+    SOCIAL SHARE CARD (1200x630)
+    ⚠️ Social platforms do NOT reliably render SVG. Export this to og-image.png
+       before launch: open this file in a browser, screenshot at 1200x630,
+       or run it through any SVG-to-PNG converter. The meta tags in index.html
+       already point at /og-image.png
+  -->
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+
+  <!-- contour lines -->
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="2">
+    <path d="M-50 120 Q 250 40 600 120 T 1250 120"/>
+    <path d="M-50 220 Q 250 140 600 220 T 1250 220"/>
+    <path d="M-50 320 Q 250 240 600 320 T 1250 320"/>
+    <path d="M-50 420 Q 250 340 600 420 T 1250 420"/>
+    <path d="M-50 520 Q 250 440 600 520 T 1250 520"/>
+  </g>
+
+  <!-- mark -->
+  <g transform="translate(90, 96)">
+    <rect width="72" height="72" rx="16" fill="#FFFFFF"/>
+    <polyline points="16,52 28,43 37,46 47,29 56,20"
+      fill="none" stroke="#0A0A0A" stroke-width="7"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="56" cy="20" r="5.5" fill="#0A0A0A"/>
+  </g>
+
+  <text x="186" y="148" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Climbora Digital</text>
+
+  <text x="90" y="330" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="82" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">Get found first.</text>
+  <text x="90" y="424" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="82" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">Get chosen more.</text>
+
+  <text x="90" y="512" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="30" font-weight="400" fill="#A1A1AA">SEO built for real growth — not vanity metrics.</text>
+
+  <text x="90" y="576" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-size="24" font-weight="500" fill="#71717A" letter-spacing="1">CLIMBORADIGITAL.COM</text>
+</svg>

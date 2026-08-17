@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------
+# INTERNAL DOCS — deliberately NOT published.
+#
+# GitHub Pages serves every file in the repo at a public URL. Without
+# these rules, PROJECT_CONTEXT.md would be readable by anyone at
+#   climboradigital.com/PROJECT_CONTEXT.md
+# It contains internal strategy notes — including that there are no
+# clients yet and that the copy is placeholder. A prospect (or a
+# competitor) finding that would do real damage.
+#
+# These files stay on your computer, they just never get pushed.
+# ---------------------------------------------------------------
+PROJECT_CONTEXT.md
+content/
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
