@@ -4,8 +4,8 @@
 <script>document.documentElement.classList.add('js-ready');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Climbora Digital — SEO That Gets You Found</title>
-<meta name="description" content="Climbora Digital helps businesses climb search rankings and turn more visitors into paying customers. Free SEO audit, no long-term contracts.">
+<title>Climbora Digital — SEO, Lead Generation & AI Solutions</title>
+<meta name="description" content="Climbora Digital helps businesses grow through SEO, lead generation, and AI-powered systems. Free growth audit, no long-term contracts.">
 <link rel="canonical" href="https://climboradigital.com/">
 <meta name="theme-color" content="#0A0A0A">
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://climboradigital.com/">
 <meta property="og:site_name" content="Climbora Digital">
-<meta property="og:title" content="Climbora Digital — SEO That Gets You Found">
-<meta property="og:description" content="SEO built for real growth, not vanity metrics. Free audit, no long-term contracts.">
+<meta property="og:title" content="Climbora Digital — SEO, Lead Generation & AI Solutions">
+<meta property="og:description" content="Growth systems built for real results, not vanity metrics. Free audit, no long-term contracts.">
 <!-- ⚠️ TODO: export og-image.svg to og-image.png (1200x630) — social platforms don't render SVG -->
 <meta property="og:image" content="https://climboradigital.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -31,8 +31,8 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Climbora Digital — SEO That Gets You Found">
-<meta name="twitter:description" content="SEO built for real growth, not vanity metrics. Free audit, no long-term contracts.">
+<meta name="twitter:title" content="Climbora Digital — SEO, Lead Generation & AI Solutions">
+<meta name="twitter:description" content="Growth systems built for real results, not vanity metrics. Free audit, no long-term contracts.">
 <meta name="twitter:image" content="https://climboradigital.com/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
   "@type": "ProfessionalService",
   "@id": "https://climboradigital.com/#business",
   "name": "Climbora Digital",
-  "description": "SEO and search visibility agency helping businesses climb search rankings and turn more visitors into paying customers.",
+  "description": "Growth agency helping businesses get found and get chosen through SEO, lead generation, and AI-powered systems.",
   "url": "https://climboradigital.com/",
   "logo": "https://climboradigital.com/favicon.svg",
   "image": "https://climboradigital.com/og-image.png",
@@ -63,7 +63,11 @@
     "Search Engine Optimization",
     "Technical SEO",
     "Local SEO",
-    "On-Page SEO and Content Strategy"
+    "On-Page SEO and Content Strategy",
+    "Lead Generation",
+    "AI Receptionist Services",
+    "Online Reputation Management",
+    "Custom AI Automation"
   ],
   "sameAs": []
 }
@@ -88,7 +92,15 @@
       "name": "What does it cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The audit itself is free. If you decide to move forward afterward, ongoing SEO packages start at $59/month, with exact scope depending on your site size and how competitive your market is."
+        "text": "The audit itself is free. If you decide to move forward with SEO afterward, ongoing packages start at $59/month. Lead generation and AI solutions are scoped and quoted individually since they vary a lot by project, but you will always get a fixed number before anything starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only do SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SEO was the starting point, but the work has expanded to lead generation and AI-powered systems too, including AI receptionists and automated review management. You can work with us on just one of these or combine them, whatever actually moves your business forward."
       }
     },
     {
@@ -212,6 +224,7 @@
     color: var(--ink-soft);
   }
   .nav-links a:hover { color: var(--ink); }
+  .nav-links a.active { color: var(--ink); }
 
   .nav-cta {
     display: flex;
@@ -585,6 +598,38 @@
   }
   .why-card p { color: var(--ink-soft); font-size: 15px; }
 
+  /* ---------- Page hero (Services, About) — simpler than Home's 2-col hero ---------- */
+  .page-hero {
+    padding: 96px 0 72px;
+    text-align: center;
+    background:
+      radial-gradient(700px circle at 50% -10%, var(--accent-soft), transparent 60%),
+      var(--contour);
+    background-repeat: no-repeat, repeat;
+  }
+  .page-hero .wrap { max-width: 700px; }
+  .page-hero h1 { margin-bottom: 16px; }
+  .page-hero p { color: var(--ink-soft); font-size: 18px; }
+
+  /* ---------- Service pillar blocks (Services page) ---------- */
+  .service-block { padding: 88px 0; }
+  .service-block-alt { background: var(--bg-alt) var(--contour-light); }
+  .service-block-head { max-width: 640px; margin: 0 auto 48px; text-align: center; }
+  .service-block-head h2 { margin-bottom: 12px; }
+  .service-block-head p { color: var(--ink-soft); font-size: 17px; }
+  .services-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+  .check-list { max-width: 640px; margin: 0 auto; display: grid; gap: 16px; }
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    list-style: none;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+  .check-list svg { flex-shrink: 0; margin-top: 3px; color: var(--accent); }
+
   /* ---------- Founder ---------- */
   .founder-alt { background: var(--bg-alt) var(--contour-light); }
   .founder-grid {
@@ -848,6 +893,7 @@
       text-align: center;
     }
     .founder-sign { justify-content: center; }
+    .services-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 680px) {
@@ -862,6 +908,8 @@
     section { padding: 64px 0; }
     .founder-photo { width: 200px; height: 200px; }
     .founder-photo .initials { font-size: 44px; }
+    .services-grid.cols-3 { grid-template-columns: 1fr; }
+    .page-hero { padding: 72px 0 56px; }
   }
 
   /* ---------- Reduced motion ----------
@@ -891,13 +939,11 @@
 
 <header>
   <nav>
-    <a href="#top" class="logo">Climbora<span>Digital</span></a>
+    <a href="index.html" class="logo">Climbora<span>Digital</span></a>
     <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
     </div>
     <div class="nav-cta">
       <a href="#contact" class="btn btn-primary btn-sm" data-cta="book">Book a Free Audit</a>
@@ -907,11 +953,9 @@
     </div>
   </nav>
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#about">About</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
     <a href="#contact" class="btn btn-primary btn-sm" data-cta="book">Book a Free Audit</a>
   </div>
 </header>
@@ -922,14 +966,15 @@
   <section class="hero" style="padding-top:64px;">
     <div class="wrap hero-inner">
       <div>
-        <div class="eyebrow">SEO &amp; Search Visibility</div>
+        <div class="eyebrow">SEO &middot; Lead Generation &middot; AI Solutions</div>
         <h1>Get found first.<br>Get chosen <span class="accent">more.</span></h1>
         <p class="lead">
-          Climbora Digital helps businesses climb search rankings and turn more visitors
-          into paying customers — through SEO built for real growth, not vanity metrics.
+          Climbora Digital helps businesses grow through SEO, lead generation, and
+          AI-powered systems — built for real results, not vanity metrics, with no
+          long-term contracts.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary" data-cta="book">Book a Free SEO Audit</a>
+          <a href="#contact" class="btn btn-primary" data-cta="book">Book a Free Growth Audit</a>
           <a href="#process" class="btn btn-ghost">See How It Works</a>
         </div>
         <div class="hero-note">
@@ -981,43 +1026,36 @@
     </div>
   </div>
 
-  <!-- ===================== SERVICES ===================== -->
+  <!-- ===================== SERVICES TEASER ===================== -->
   <section id="services">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">What We Do</div>
-        <h2>SEO built around how your business actually grows</h2>
-        <p>Whether you're a local shop or an online-only brand, we build the strategy around your customers — not a one-size-fits-all package.</p>
+        <h2>Three ways we help you grow</h2>
+        <p>Pick one service or combine all three — the strategy adapts to what your business actually needs.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card reveal">
+      <div class="services-grid cols-3">
+        <a href="services.html#seo" class="service-card reveal">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
           </div>
-          <h3>SEO Audits &amp; Strategy</h3>
-          <p>A clear picture of where you stand today and a prioritized roadmap for what to fix first.</p>
-        </div>
-        <div class="service-card reveal">
+          <h3>Website SEO</h3>
+          <p>Climb search rankings and turn more visitors into paying customers with technical, on-page, and local SEO.</p>
+        </a>
+        <a href="services.html#leadgen" class="service-card reveal">
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Lead Generation</h3>
+          <p>Find and reach your ideal customers directly, instead of waiting for them to stumble onto you.</p>
+        </a>
+        <a href="services.html#ai" class="service-card reveal">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg>
           </div>
-          <h3>Technical SEO</h3>
-          <p>Fix the site-speed, crawlability, and structural issues quietly capping your rankings.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-          </div>
-          <h3>On-Page &amp; Content</h3>
-          <p>Pages and content structured to rank for what your customers are actually searching.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <h3>Local SEO</h3>
-          <p>Show up when nearby customers search for what you offer — maps, listings, and reviews included.</p>
-        </div>
+          <h3>AI Solutions</h3>
+          <p>AI receptionists, automated review management, and custom automation built around your business.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -1034,98 +1072,22 @@
         <div class="process-step reveal">
           <div class="process-num">1</div>
           <h3>Free Audit</h3>
-          <p>We analyze your current site, rankings, and competitors — no cost, no obligation.</p>
+          <p>We analyze your current site, marketing, and growth opportunities — no cost, no obligation.</p>
         </div>
         <div class="process-step reveal">
           <div class="process-num">2</div>
           <h3>Strategy</h3>
-          <p>A custom SEO roadmap built around your goals, market, and budget.</p>
+          <p>A custom growth roadmap built around your goals, market, and budget.</p>
         </div>
         <div class="process-step reveal">
           <div class="process-num">3</div>
           <h3>Execution</h3>
-          <p>We implement the technical, on-page, and content fixes that move the needle.</p>
+          <p>We implement the fixes, campaigns, or systems that move the needle.</p>
         </div>
         <div class="process-step reveal">
           <div class="process-num">4</div>
           <h3>Reporting</h3>
-          <p>Monthly reports tied to rankings, traffic, and leads — not vanity metrics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== WHY US ===================== -->
-  <section id="why">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Why Climbora</div>
-        <h2>What working with us looks like</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <h3>
-            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>
-            Transparent reporting
-          </h3>
-          <p>You see rankings, traffic, and lead data every month — plain numbers, no smoke and mirrors.</p>
-        </div>
-        <div class="why-card reveal">
-          <h3>
-            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l6-6M3 21v-6h6"/><path d="M21 3l-6 6M21 3v6h-6"/></svg></span>
-            Built for any business
-          </h3>
-          <p>Local, national, e-commerce, or service-based — the strategy adapts to how you actually get customers.</p>
-        </div>
-        <div class="why-card reveal">
-          <h3>
-            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
-            No long-term lock-in
-          </h3>
-          <p>Month-to-month by default. You stay because the work is paying off — not because you signed something.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOUNDER / ABOUT =====================
-       ⚠️ TODO: replace the bracketed placeholders below with your real background,
-       and swap the initials block for an actual photo. A real face is the single
-       biggest trust lever you have before you have case studies. -->
-  <section id="about" class="founder-alt">
-    <div class="wrap">
-      <div class="founder-grid">
-        <div class="founder-photo reveal">
-          <!-- Replace this whole block with: <img src="founder.jpg" alt="Ioan, founder of Climbora Digital"> -->
-          <span class="initials">IG</span>
-          <span class="photo-note">Add a real photo here<br>(headshot, 600×600 or larger)</span>
-        </div>
-        <div class="founder-body reveal">
-          <div class="eyebrow">Who You're Working With</div>
-          <h2>Hi, I'm Ioan</h2>
-          <div class="founder-role">Founder · Climbora Digital</div>
-          <p>
-            Climbora Digital is founder-led, which means the person auditing your site is
-            the person doing the work and the person you email when you have a question.
-            No account manager in between, no junior handoff.
-          </p>
-          <!-- ⚠️ This paragraph is a starting draft, not a final bio — see the note in
-               PROJECT_CONTEXT.md. It deliberately does NOT invent an employer, years of
-               experience, or past clients you don't have. Edit it freely; just keep it true. -->
-          <p>
-            I'm self-taught — I learned SEO the same way I imagine a lot of you built your
-            own businesses: by doing it, breaking things, and figuring out what actually
-            moves the needle instead of what sounds good in a sales deck. Climbora Digital
-            is my first agency, built from scratch rather than inherited from a past job.
-          </p>
-          <p>
-            I'm building this deliberately slowly and taking on a small number of clients
-            at a time, so the work stays hands-on rather than templated.
-          </p>
-          <div class="founder-sign">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            You'll always deal with me directly
-          </div>
+          <p>Monthly reports tied to rankings, leads, and results — not vanity metrics.</p>
         </div>
       </div>
     </div>
@@ -1151,7 +1113,13 @@
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">What does it cost?</button>
           <div class="faq-a">
-            <p>The audit itself is free. If you decide to move forward afterward, ongoing SEO packages start at $59/month — exact scope depends on your site size and how competitive your market is, and you'll get a fixed number before anything starts.</p>
+            <p>The audit itself is free. If you decide to move forward with SEO afterward, ongoing packages start at $59/month. Lead generation and AI solutions are scoped and quoted individually since they vary a lot by project — you'll always get a fixed number before anything starts.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Do you only do SEO?</button>
+          <div class="faq-a">
+            <p>No. SEO was the starting point, but the work has expanded to lead generation and AI-powered systems too, including AI receptionists and automated review management. You can work with us on just one of these or combine them, whatever actually moves your business forward.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -1185,8 +1153,8 @@
   <!-- ===================== CTA BAND ===================== -->
   <section style="padding-top:0;">
     <div class="cta-band">
-      <h2>Ready to climb the rankings?</h2>
-      <p>Get a free, no-obligation audit of your website's current SEO performance and what's holding it back.</p>
+      <h2>Ready to climb to the next level?</h2>
+      <p>Get a free, no-obligation audit of your website, growth systems, and where AI could save you time.</p>
       <a href="#contact" class="btn btn-primary" data-cta="book">Book Your Free Audit</a>
     </div>
   </section>
@@ -1238,7 +1206,7 @@
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
                aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
         <input type="hidden" name="_subject" value="New free audit request — climboradigital.com">
-        <button type="submit" class="btn btn-primary">Request Free Audit</button>
+        <button type="submit" class="btn btn-primary">Request Free Growth Audit</button>
         <p class="form-note" id="form-note">This form doesn't send anywhere yet — add your Formspree ID in the code to activate it.</p>
       </form>
     </div>
@@ -1249,11 +1217,10 @@
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <a href="#top" class="logo">Climbora<span>Digital</span></a>
+      <a href="index.html" class="logo">Climbora<span>Digital</span></a>
       <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#why">Why Us</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy</a>
       </div>
@@ -1308,19 +1275,24 @@
   // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Contact form — blocks submission only while the Formspree ID is still a placeholder
+  // Contact form — blocks submission only while the Formspree ID is still a placeholder.
+  // Guarded because only index.html has a contact form; without this check, services.html
+  // and about.html would throw here and silently kill every script below it on the page
+  // (mobile menu, FAQ accordion, scroll reveal — all of it, since it's one script block).
   var contactForm = document.getElementById('contact-form');
-  var formNote = document.getElementById('form-note');
-  var formIsWired = contactForm.getAttribute('action').indexOf('YOUR_FORM_ID') === -1;
+  if (contactForm) {
+    var formNote = document.getElementById('form-note');
+    var formIsWired = contactForm.getAttribute('action').indexOf('YOUR_FORM_ID') === -1;
 
-  if (formIsWired) {
-    // Real endpoint present — let the browser submit normally, and hide the warning note
-    if (formNote) formNote.style.display = 'none';
-  } else {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('This form isn\'t connected yet.\n\nAdd your Formspree form ID to the action="" attribute in index.html to start receiving submissions.');
-    });
+    if (formIsWired) {
+      // Real endpoint present — let the browser submit normally, and hide the warning note
+      if (formNote) formNote.style.display = 'none';
+    } else {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('This form isn\'t connected yet.\n\nAdd your Formspree form ID to the action="" attribute in index.html to start receiving submissions.');
+      });
+    }
   }
 
   // FAQ accordion

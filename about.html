@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js-ready');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Climbora Digital</title>
+<meta name="description" content="Meet the founder behind Climbora Digital — a self-taught, founder-led agency built from scratch, not inherited from a past job.">
+<link rel="canonical" href="https://climboradigital.com/about.html">
+<meta name="theme-color" content="#0A0A0A">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://climboradigital.com/about.html">
+<meta property="og:site_name" content="Climbora Digital">
+<meta property="og:title" content="About Us — Climbora Digital">
+<meta property="og:description" content="Founder-led, built from scratch, and still small on purpose. Meet the person behind Climbora Digital.">
+<meta property="og:image" content="https://climboradigital.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Climbora Digital — Get found first. Get chosen more.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Us — Climbora Digital">
+<meta name="twitter:description" content="Founder-led, built from scratch, and still small on purpose. Meet the person behind Climbora Digital.">
+<meta name="twitter:image" content="https://climboradigital.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!--
+  Structured data — helps Google understand what this business is.
+  ⚠️ TODO: add real profile URLs to "sameAs" once social handles are claimed.
+  Kept identical to index.html/services.html on purpose — same business entity.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://climboradigital.com/#business",
+  "name": "Climbora Digital",
+  "description": "Growth agency helping businesses get found and get chosen through SEO, lead generation, and AI-powered systems.",
+  "url": "https://climboradigital.com/",
+  "logo": "https://climboradigital.com/favicon.svg",
+  "image": "https://climboradigital.com/og-image.png",
+  "email": "ioangolemi01@gmail.com",
+  "priceRange": "$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": [
+    "Search Engine Optimization",
+    "Technical SEO",
+    "Local SEO",
+    "On-Page SEO and Content Strategy",
+    "Lead Generation",
+    "AI Receptionist Services",
+    "Online Reputation Management",
+    "Custom AI Automation"
+  ],
+  "sameAs": []
+}
+</script>
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --ink-soft: #52525B;
+    --line: #E4E4E7;
+    --bg: #FFFFFF;
+    --bg-alt: #F8F8F8;
+    --accent: #0A0A0A;
+    --accent-dark: #000000;
+    --accent-soft: #F1F1F1;
+    --radius: 14px;
+    --max: 1120px;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    /* Seamless topographic tile (420x220). See index.html for the full
+       explanation — don't shift a single y value without redoing both edges. */
+    --contour: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220'%3E%3Cg fill='none' stroke='%230A0A0A' stroke-opacity='0.05' stroke-width='1'%3E%3Cpath d='M0 22 Q 105 2 210 22 T 420 22'/%3E%3Cpath d='M0 66 Q 105 82 210 66 T 420 66'/%3E%3Cpath d='M0 110 Q 105 88 210 110 T 420 110'/%3E%3Cpath d='M0 154 Q 105 168 210 154 T 420 154'/%3E%3Cpath d='M0 198 Q 105 180 210 198 T 420 198'/%3E%3C/g%3E%3C/svg%3E");
+    --contour-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220'%3E%3Cg fill='none' stroke='%230A0A0A' stroke-opacity='0.04' stroke-width='1'%3E%3Cpath d='M0 22 Q 105 2 210 22 T 420 22'/%3E%3Cpath d='M0 66 Q 105 82 210 66 T 420 66'/%3E%3Cpath d='M0 110 Q 105 88 210 110 T 420 110'/%3E%3Cpath d='M0 154 Q 105 168 210 154 T 420 154'/%3E%3Cpath d='M0 198 Q 105 180 210 198 T 420 198'/%3E%3C/g%3E%3C/svg%3E");
+    --contour-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='220'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M0 22 Q 105 2 210 22 T 420 22'/%3E%3Cpath d='M0 66 Q 105 82 210 66 T 420 66'/%3E%3Cpath d='M0 110 Q 105 88 210 110 T 420 110'/%3E%3Cpath d='M0 154 Q 105 168 210 154 T 420 154'/%3E%3Cpath d='M0 198 Q 105 180 210 198 T 420 198'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .cta-band a:focus-visible { outline-color: #fff; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Nav ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.active { color: var(--ink); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+    white-space: nowrap;
+  }
+  .btn:active {
+    transform: translateY(0) scale(0.97) !important;
+    transition-duration: 0.1s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+  .btn-primary:hover {
+    background: #2A2A2A;
+    transform: translateY(-2px) scale(1.015);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  }
+  .btn-sm { padding: 10px 18px; font-size: 14px; }
+
+  .menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 24px 20px;
+    border-top: 1px solid var(--line);
+    background: #fff;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 12px 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .mobile-menu a:last-of-type { border-bottom: none; }
+  .mobile-menu .btn { margin-top: 8px; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 7px solid var(--accent);
+  }
+
+  h2 {
+    font-size: clamp(28px, 3.4vw, 38px);
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  /* ---------- Section shared ---------- */
+  section { padding: 96px 0; }
+  .section-head {
+    max-width: 620px;
+    margin: 0 auto 56px;
+    text-align: center;
+  }
+  .section-head .eyebrow { margin-bottom: 16px; }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal { transition: opacity 0.65s ease, transform 0.65s ease; }
+  .js-ready .reveal { opacity: 0; transform: translateY(22px); }
+  .js-ready .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .why-grid .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .why-grid .reveal:nth-child(3) { transition-delay: 0.16s; }
+
+  /* ---------- Why us ---------- */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .why-card { padding: 4px; }
+  .why-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .why-icon {
+    width: 30px;
+    height: 30px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 24%);
+  }
+  .why-card p { color: var(--ink-soft); font-size: 15px; }
+
+  /* ---------- Founder ---------- */
+  .founder-alt { background: var(--bg-alt) var(--contour-light); }
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .founder-photo {
+    width: 260px;
+    height: 260px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 14%);
+  }
+  .founder-photo .initials {
+    font-family: var(--font-mono);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .founder-photo .photo-note {
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 0 16px;
+    line-height: 1.4;
+  }
+  .founder-body h1 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.02em; font-weight: 800; margin-bottom: 6px; }
+  .founder-role {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .founder-body p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .founder-body p:last-of-type { margin-bottom: 24px; }
+  .founder-sign {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  /* ---------- CTA band ---------- */
+  .cta-band {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 24px;
+    padding: 64px 48px;
+    text-align: center;
+    margin: 0 24px;
+  }
+  .cta-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--contour-dark);
+    pointer-events: none;
+  }
+  .cta-band > * { position: relative; z-index: 1; }
+  .cta-band h2 { color: #fff; }
+  .cta-band p { color: #A1A1AA; max-width: 480px; margin: 0 auto 32px; font-size: 17px; }
+  .cta-band .btn-primary { background: #fff; color: var(--ink); }
+  .cta-band .btn-primary:hover { background: #E4E4E7; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 0 32px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .footer-bottom {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ---------- Scroll progress ---------- */
+  .scroll-progress {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--ink);
+    z-index: 200;
+    transition: width 0.1s linear;
+  }
+  .js-ready .scroll-progress { display: block; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .founder-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      justify-items: center;
+      text-align: center;
+    }
+    .founder-sign { justify-content: center; }
+  }
+
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+    .nav-cta .btn-primary.btn-sm { display: none; }
+    .menu-toggle { display: inline-flex; cursor: pointer; }
+    .cta-band { padding: 48px 24px; margin: 0 16px; }
+    section { padding: 64px 0; }
+    .founder-photo { width: 200px; height: 200px; }
+    .founder-photo .initials { font-size: 44px; }
+  }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .js-ready .reveal { opacity: 1 !important; transform: none !important; }
+    .btn:hover { transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Climbora<span>Digital</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html" class="active">About Us</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-primary btn-sm" data-cta="book">Book a Free Audit</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="index.html#contact" class="btn btn-primary btn-sm" data-cta="book">Book a Free Audit</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== FOUNDER =====================
+       ⚠️ TODO: replace the bracketed placeholders below with your real background,
+       and swap the initials block for an actual photo. A real face is the single
+       biggest trust lever you have before you have case studies. -->
+  <section class="founder-alt">
+    <div class="wrap">
+      <div class="founder-grid">
+        <div class="founder-photo reveal">
+          <!-- Replace this whole block with: <img src="founder.jpg" alt="Ioan, founder of Climbora Digital"> -->
+          <span class="initials">IG</span>
+          <span class="photo-note">Add a real photo here<br>(headshot, 600×600 or larger)</span>
+        </div>
+        <div class="founder-body reveal">
+          <div class="eyebrow">Who You're Working With</div>
+          <h1>Hi, I'm Ioan</h1>
+          <div class="founder-role">Founder · Climbora Digital</div>
+          <p>
+            Climbora Digital is founder-led, which means the person auditing your site is
+            the person doing the work and the person you email when you have a question.
+            No account manager in between, no junior handoff.
+          </p>
+          <!-- ⚠️ This paragraph is a starting draft, not a final bio — see the note in
+               PROJECT_CONTEXT.md. It deliberately does NOT invent an employer, years of
+               experience, or past clients you don't have. Edit it freely; just keep it true. -->
+          <p>
+            I'm self-taught — I learned SEO the same way I imagine a lot of you built your
+            own businesses: by doing it, breaking things, and figuring out what actually
+            moves the needle instead of what sounds good in a sales deck. Climbora Digital
+            is my first agency, built from scratch rather than inherited from a past job.
+          </p>
+          <p>
+            I'm building this deliberately slowly and taking on a small number of clients
+            at a time, so the work stays hands-on rather than templated.
+          </p>
+          <div class="founder-sign">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            You'll always deal with me directly
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY US ===================== -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Why Climbora</div>
+        <h2>What working with us looks like</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <h3>
+            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>
+            Transparent reporting
+          </h3>
+          <p>You see rankings, traffic, and lead data every month — plain numbers, no smoke and mirrors.</p>
+        </div>
+        <div class="why-card reveal">
+          <h3>
+            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l6-6M3 21v-6h6"/><path d="M21 3l-6 6M21 3v6h-6"/></svg></span>
+            Built for any business
+          </h3>
+          <p>Local, national, e-commerce, or service-based — the strategy adapts to how you actually get customers.</p>
+        </div>
+        <div class="why-card reveal">
+          <h3>
+            <span class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
+            No long-term lock-in
+          </h3>
+          <p>Month-to-month by default. You stay because the work is paying off — not because you signed something.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section style="padding-top:0;">
+    <div class="cta-band">
+      <h2>Ready to talk?</h2>
+      <p>Get a free, no-obligation audit and a straight answer about whether we're a fit.</p>
+      <a href="index.html#contact" class="btn btn-primary" data-cta="book">Book a Free Call</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="logo">Climbora<span>Digital</span></a>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Climbora Digital. All rights reserved.</span>
+      <span>Made to climb.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     CONFIG — keep in sync with index.html
+     ============================================================ */
+  var BOOKING_URL = 'https://cal.com/xecutiv/30min';
+  /* ============================================================ */
+
+  if (BOOKING_URL) {
+    document.querySelectorAll('[data-cta="book"]').forEach(function (el) {
+      el.href = BOOKING_URL;
+      el.target = '_blank';
+      el.rel = 'noopener';
+    });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var menuToggle = document.getElementById('menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', function () {
+    var isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  var scrollProgress = document.getElementById('scroll-progress');
+  function updateScrollProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  window.addEventListener('resize', updateScrollProgress);
+  updateScrollProgress();
+
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function (el) { revealObserver.observe(el); });
+</script>
+
+</body>
+</html>
