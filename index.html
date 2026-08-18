@@ -877,6 +877,15 @@
   }
   .js-ready .scroll-progress { display: block; }
 
+  /* ---------- Page transition ----------
+     Crossfades between pages instead of the default instant flash. No-JS:
+     body has no opacity rule outside .js-ready, so it's always fully visible
+     immediately — same progressive-enhancement pattern as .reveal elsewhere. */
+  body { transition: opacity 0.2s ease; }
+  .js-ready body { opacity: 0; }
+  .js-ready body.page-ready { opacity: 1; }
+  .js-ready body.page-leaving { opacity: 0; }
+
   /* ---------- Responsive ---------- */
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; }
@@ -1394,6 +1403,40 @@
       });
     }, { threshold: 0.3 });
     chartObserver.observe(chartCard);
+  }
+
+  // Page transition — fades the new page in, and briefly fades the current
+  // page out before following a link to another page on this site, so
+  // moving between pages feels like a soft crossfade instead of an instant
+  // flash. Must run AFTER the BOOKING_URL block above, since it relies on
+  // booking links already having target="_blank" set so they get skipped
+  // here and keep opening in a new tab instead of being hijacked into a
+  // same-tab fade+navigate.
+  if (prefersReducedMotion) {
+    document.body.classList.add('page-ready');
+  } else {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add('page-ready');
+      });
+    });
+
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      if (link.target === '_blank') return;
+      if (link.hostname && link.hostname !== window.location.hostname) return;
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#') return; // same-page anchor — no transition needed
+      if (href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) return;
+
+      link.addEventListener('click', function (e) {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var target = link.href; // resolved absolute URL, read fresh at click time
+        e.preventDefault();
+        document.body.classList.remove('page-ready');
+        document.body.classList.add('page-leaving');
+        window.setTimeout(function () { window.location.href = target; }, 180);
+      });
+    });
   }
 </script>
 

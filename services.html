@@ -433,6 +433,15 @@
   }
   .js-ready .scroll-progress { display: block; }
 
+  /* ---------- Page transition ----------
+     Crossfades between pages instead of the default instant flash. No-JS:
+     body has no opacity rule outside .js-ready, so it's always fully visible
+     immediately — same progressive-enhancement pattern as .reveal elsewhere. */
+  body { transition: opacity 0.2s ease; }
+  .js-ready body { opacity: 0; }
+  .js-ready body.page-ready { opacity: 1; }
+  .js-ready body.page-leaving { opacity: 0; }
+
   /* ---------- Responsive ---------- */
   @media (max-width: 900px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -689,6 +698,36 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+  // Page transition — see index.html for the full explanation. Must run
+  // AFTER the BOOKING_URL block above so booking links already have
+  // target="_blank" set and get correctly skipped here.
+  if (prefersReducedMotion) {
+    document.body.classList.add('page-ready');
+  } else {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add('page-ready');
+      });
+    });
+
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      if (link.target === '_blank') return;
+      if (link.hostname && link.hostname !== window.location.hostname) return;
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#') return;
+      if (href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) return;
+
+      link.addEventListener('click', function (e) {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var target = link.href;
+        e.preventDefault();
+        document.body.classList.remove('page-ready');
+        document.body.classList.add('page-leaving');
+        window.setTimeout(function () { window.location.href = target; }, 180);
+      });
+    });
+  }
 </script>
 
 </body>

@@ -34,6 +34,15 @@
   a { color: inherit; }
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
+  /* ---------- Page transition ----------
+     Crossfades between pages instead of the default instant flash. No-JS:
+     body has no opacity rule outside .js-ready, so it's always fully visible
+     immediately. Matches index.html/services.html/about.html. */
+  body { transition: opacity 0.2s ease; }
+  .js-ready body { opacity: 0; }
+  .js-ready body.page-ready { opacity: 1; }
+  .js-ready body.page-leaving { opacity: 0; }
+
   header {
     border-bottom: 1px solid var(--line);
     padding: 18px 0;
@@ -191,6 +200,35 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Page transition — see index.html for the full explanation.
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    document.body.classList.add('page-ready');
+  } else {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add('page-ready');
+      });
+    });
+
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      if (link.target === '_blank') return;
+      if (link.hostname && link.hostname !== window.location.hostname) return;
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#') return;
+      if (href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) return;
+
+      link.addEventListener('click', function (e) {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var target = link.href;
+        e.preventDefault();
+        document.body.classList.remove('page-ready');
+        document.body.classList.add('page-leaving');
+        window.setTimeout(function () { window.location.href = target; }, 180);
+      });
+    });
+  }
 </script>
 
 </body>
