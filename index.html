@@ -41,7 +41,7 @@
 
 <!--
   Structured data — helps Google understand what this business is.
-  ⚠️ TODO: add real profile URLs to "sameAs" once social handles are claimed.
+  ⚠️ TODO: add Facebook/X to "sameAs" once those handles are claimed too.
 -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
     "Online Reputation Management",
     "Custom AI Automation"
   ],
-  "sameAs": []
+  "sameAs": ["https://www.instagram.com/climboradigital/"]
 }
 </script>
 
@@ -851,6 +851,8 @@
     color: var(--ink-soft);
   }
   .footer-social a:hover { color: var(--accent); border-color: var(--accent); }
+  .footer-social a.is-placeholder { cursor: default; opacity: 0.4; }
+  .footer-social a.is-placeholder:hover { color: var(--ink-soft); border-color: var(--line); }
   .footer-bottom {
     margin-top: 32px;
     padding-top: 24px;
@@ -1233,18 +1235,22 @@
         <a href="#contact">Contact</a>
         <a href="privacy.html">Privacy</a>
       </div>
-      <!--
-        SOCIAL ICONS — removed because all three pointed at "#", and dead links
-        read worse than no links. To restore: claim the handles, paste the block
-        below back in, swap each href for the real profile URL, and also add
-        those URLs to the "sameAs" array in the JSON-LD schema in <head>.
-
-        <div class="footer-social">
-          <a href="https://instagram.com/YOURHANDLE" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="https://linkedin.com/company/YOURHANDLE" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4V8h4v2a6 6 0 014-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="https://x.com/YOURHANDLE" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
-        </div>
-      -->
+      <div class="footer-social">
+        <a href="https://www.instagram.com/climboradigital/" target="_blank" rel="noopener" aria-label="Climbora Digital on Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <!-- ⚠️ Facebook page not live yet — placeholder, not a link. To activate:
+             add href="https://facebook.com/YOURPAGE" target="_blank" rel="noopener",
+             remove class="is-placeholder" and aria-disabled below, and add the URL
+             to the "sameAs" array in the JSON-LD schema in <head>. -->
+        <a class="is-placeholder" aria-label="Facebook (coming soon)" aria-disabled="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <!-- ⚠️ X account not live yet — same activation steps as Facebook above. -->
+        <a class="is-placeholder" aria-label="X (coming soon)" aria-disabled="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+      </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Climbora Digital. All rights reserved.</span>
