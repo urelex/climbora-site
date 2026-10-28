@@ -453,6 +453,21 @@
   .js-ready body.page-ready { opacity: 1; }
   .js-ready body.page-leaving { opacity: 0; }
 
+
+  /* ---------- Offer pages ---------- */
+  .page-hero .hero-cta { margin-top: 28px; }
+  a.service-card { display: block; }
+  .card-more {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+  }
+
   /* ---------- Responsive ---------- */
   @media (max-width: 900px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -523,104 +538,34 @@
     </div>
   </section>
 
-  <!-- ===================== ORGANIC CONTENT ===================== -->
-  <section id="content" class="service-block">
+  <!-- ===================== OFFERS ===================== -->
+  <section class="service-block">
     <div class="wrap">
-      <div class="service-block-head">
-        <div class="eyebrow">Organic Content</div>
-        <h2>Grow an audience without paying for ads</h2>
-        <p>Ads stop working the moment you stop paying. Organic content keeps working — posts and pages that build trust with the people you want as customers and bring them back to you over time.</p>
-      </div>
       <div class="services-grid cols-3">
-        <div class="service-card reveal">
+        <a href="organic-content.html" class="service-card reveal">
           <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <h3>Content Strategy</h3>
-          <p>A clear plan for what to post, where, and how often — built around what your customers actually care about.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-          </div>
-          <h3>Social Media Content</h3>
-          <p>Posts and short-form video for the platforms your customers already spend time on.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-          </div>
-          <h3>Website &amp; Blog Content</h3>
-          <p>Pages and articles that answer your customers&#39; questions and give them a reason to choose you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LANDING PAGES & WEBSITES ===================== -->
-  <section id="websites" class="service-block service-block-alt">
-    <div class="wrap">
-      <div class="service-block-head">
-        <div class="eyebrow">Landing Pages &amp; Websites</div>
-        <h2>A site that actually turns visitors into customers</h2>
-        <p>Your website is often the first impression you make. We build clean, fast sites and focused landing pages designed around one job: getting the right visitors to call, book, or buy.</p>
-      </div>
-      <div class="services-grid cols-3">
-        <div class="service-card reveal">
+          <h3>Organic Content</h3>
+          <p>Social and website content that grows your audience and brings customers in — without paying for ads.</p>
+          <span class="card-more">Learn more &rarr;</span>
+        </a>
+        <a href="websites.html" class="service-card reveal">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
-          <h3>Business Websites</h3>
-          <p>A complete, professional site that explains who you are and what you offer — and looks great on any device.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg>
-          </div>
-          <h3>Landing Pages</h3>
-          <p>A single focused page for one offer, campaign, or product, built to get visitors to take one action.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-          </div>
-          <h3>Built to Convert</h3>
-          <p>Fast load times, clear calls to action, and simple contact or booking forms that make it easy to say yes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== ONLINE STORES ===================== -->
-  <section id="stores" class="service-block">
-    <div class="wrap">
-      <div class="service-block-head">
-        <div class="eyebrow">Online Stores</div>
-        <h2>Start selling online — the right way</h2>
-        <p>Whether you're moving an existing shop online or launching something new, we set up a store that's easy for customers to buy from and easy for you to run day to day.</p>
-      </div>
-      <div class="services-grid cols-3">
-        <div class="service-card reveal">
+          <h3>Landing Pages &amp; Websites</h3>
+          <p>Fast, clean sites and focused landing pages built to turn visitors into calls, bookings, and sales.</p>
+          <span class="card-more">Learn more &rarr;</span>
+        </a>
+        <a href="online-stores.html" class="service-card reveal">
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
           </div>
-          <h3>Store Setup</h3>
-          <p>Your products, photos, and descriptions laid out cleanly so shoppers find what they want fast.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
-          </div>
-          <h3>Payments &amp; Shipping</h3>
-          <p>Secure checkout, payment options, and shipping settings configured and tested before launch.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          </div>
-          <h3>Easy to Manage</h3>
-          <p>A store you can update yourself — add products, change prices, and track orders without calling us.</p>
-        </div>
+          <h3>Online Stores</h3>
+          <p>Online shops that are easy to buy from and easy for you to run — products, payments, and shipping set up.</p>
+          <span class="card-more">Learn more &rarr;</span>
+        </a>
       </div>
     </div>
   </section>

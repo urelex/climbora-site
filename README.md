@@ -12,7 +12,10 @@ Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is a
 
 ```
 ├── index.html        Home
-├── services.html     Services — Organic Content, Landing Pages & Websites, Online Stores
+├── services.html       Services overview
+├── organic-content.html  Organic Content
+├── websites.html        Landing Pages & Websites
+├── online-stores.html   Online Stores
 ├── about.html         About / founder
 ├── privacy.html        Privacy policy
 ├── favicon.svg
