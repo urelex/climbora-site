@@ -1,6 +1,6 @@
 # Climbora Digital
 
-Marketing website for [Climbora Digital](https://climboradigital.com) — SEO, lead generation, and AI solutions for small businesses.
+Marketing website for [Climbora Digital](https://climboradigital.com) — organic content, landing pages & websites, and online stores for small businesses.
 
 **Live site:** https://climboradigital.com
 
@@ -12,7 +12,7 @@ Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is a
 
 ```
 ├── index.html        Home
-├── services.html     Services — Website SEO, Lead Generation, AI Solutions
+├── services.html     Services — Organic Content, Landing Pages & Websites, Online Stores
 ├── about.html         About / founder
 ├── privacy.html        Privacy policy
 ├── favicon.svg
