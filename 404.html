@@ -1168,6 +1168,33 @@
     .marquee-track, .mock, .mock *, .mock *::after, .mock-toast, .founder-badge .ring { animation: none !important; }
     .mock-toast { display: none; }
   }
+
+  /* ---------- Custom cursor (mouse/trackpad only; JS adds .has-cursor) ---------- */
+  .has-cursor, .has-cursor * { cursor: none !important; }
+  .has-cursor input, .has-cursor textarea { cursor: text !important; }
+  .cursor-dot, .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: difference; /* white + difference = black on light, white on dark */
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .cursor-dot { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #fff; }
+  .cursor-ring {
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border: 1.5px solid #fff;
+    transition: opacity 0.25s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), margin 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  }
+  .has-cursor.cursor-visible .cursor-dot, .has-cursor.cursor-visible .cursor-ring { opacity: 1; }
+  .cursor-ring.is-hover { width: 60px; height: 60px; margin: -30px 0 0 -30px; background: #fff; }
+  .cursor-ring.is-down { width: 26px; height: 26px; margin: -13px 0 0 -13px; }
+  .cursor-ring.is-text { opacity: 0 !important; }
 </style>
 </head>
 <body>
@@ -1414,6 +1441,48 @@
         });
       });
     }
+  })();
+</script>
+
+<script>
+  // Custom cursor: a dot that tracks the pointer exactly and a ring that eases
+  // after it, growing over anything clickable. Only on real mice/trackpads.
+  (function () {
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var root = document.documentElement;
+    var dot = document.createElement('div');
+    var ring = document.createElement('div');
+    dot.className = 'cursor-dot';
+    ring.className = 'cursor-ring';
+    dot.setAttribute('aria-hidden', 'true');
+    ring.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    root.classList.add('has-cursor');
+
+    var x = -100, y = -100, rx = -100, ry = -100, running = false;
+    function tick() {
+      rx += (x - rx) * (reduce ? 1 : 0.18);
+      ry += (y - ry) * (reduce ? 1 : 0.18);
+      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
+      if (Math.abs(x - rx) > 0.1 || Math.abs(y - ry) > 0.1) requestAnimationFrame(tick);
+      else running = false;
+    }
+    document.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      x = e.clientX;
+      y = e.clientY;
+      dot.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      root.classList.add('cursor-visible');
+      if (!running) { running = true; requestAnimationFrame(tick); }
+      var t = e.target.closest ? e.target : null;
+      ring.classList.toggle('is-hover', !!(t && t.closest('a, button, select, label, .faq-q, [role="button"]')));
+      ring.classList.toggle('is-text', !!(t && t.closest('input, textarea')));
+    });
+    document.addEventListener('pointerdown', function () { ring.classList.add('is-down'); });
+    document.addEventListener('pointerup', function () { ring.classList.remove('is-down'); });
+    document.documentElement.addEventListener('mouseleave', function () { root.classList.remove('cursor-visible'); });
   })();
 </script>
 
