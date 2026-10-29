@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <!--
-    SOCIAL SHARE CARD (1200x630)
-    ⚠️ Social platforms do NOT reliably render SVG. Export this to og-image.png
-       before launch: open this file in a browser, screenshot at 1200x630,
-       or run it through any SVG-to-PNG converter. The meta tags in index.html
-       already point at /og-image.png
+    SOCIAL SHARE CARD (1200x630) — source for og-image.png.
+    Social platforms don't render SVG, so the meta tags point at og-image.png.
+    If you edit this file, re-export the PNG to match.
   -->
   <rect width="1200" height="630" fill="#0A0A0A"/>
 
@@ -30,12 +28,12 @@
     font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Climbora Digital</text>
 
   <text x="90" y="330" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
-    font-size="82" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">Get found first.</text>
+    font-size="82" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">Get Found First.</text>
   <text x="90" y="424" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
-    font-size="82" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">Get chosen more.</text>
+    font-size="82" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">Get Chosen More.</text>
 
   <text x="90" y="512" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
-    font-size="30" font-weight="400" fill="#A1A1AA">SEO built for real growth — not vanity metrics.</text>
+    font-size="30" font-weight="400" fill="#A1A1AA">Organic Content · Websites · Online Stores</text>
 
   <text x="90" y="576" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
     font-size="24" font-weight="500" fill="#71717A" letter-spacing="1">CLIMBORADIGITAL.COM</text>

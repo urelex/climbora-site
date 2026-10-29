@@ -19,7 +19,8 @@ Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is a
 ├── about.html         About / founder
 ├── privacy.html        Privacy policy
 ├── favicon.svg
-├── og-image.svg         Social share card source (export to og-image.png before deploying changes to it)
+├── og-image.png         Social share card (1200×630)
+├── og-image.svg         Source for og-image.png — re-export the PNG if you edit it
 ├── robots.txt
 └── sitemap.xml
 ```
