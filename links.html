@@ -108,7 +108,17 @@
   }
   .bio { margin-top: 14px; max-width: 34ch; font-size: 15px; color: var(--ink-soft); }
 
-  .links { width: 100%; margin-top: 32px; display: grid; gap: 12px; }
+  .reel {
+    width: 100%;
+    margin-top: 28px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--ink) url("/climbora-reel.jpg") center / cover;
+    box-shadow: 0 24px 50px -24px rgba(10,10,10,0.5);
+  }
+  .reel video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .links { width: 100%; margin-top: 24px; display: grid; gap: 12px; }
   .link {
     position: relative;
     display: flex;
@@ -207,6 +217,11 @@
   <div class="tag rise" style="--i:2">Content · Websites · Stores</div>
   <p class="bio rise" style="--i:3">Helping businesses get found first and chosen more. No long-term contracts.</p>
 
+  <div class="reel rise" style="--i:4">
+    <video id="reel" src="/climbora-reel.mp4" poster="/climbora-reel.jpg" autoplay muted loop playsinline preload="metadata"
+           aria-label="Climbora Digital: organic content, websites, and online stores. Book a free call."></video>
+  </div>
+
   <nav class="links" aria-label="Links">
     <a class="link primary rise" style="--i:4" href="https://cal.com/xecutiv/30min" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
@@ -255,6 +270,13 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  // Respect "reduce motion": show the still poster with play controls instead of autoplaying
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var reel = document.getElementById('reel');
+    reel.removeAttribute('autoplay');
+    reel.pause();
+    reel.controls = true;
+  }
   requestAnimationFrame(function () {
     requestAnimationFrame(function () { document.documentElement.classList.add('ready'); });
   });
