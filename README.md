@@ -6,7 +6,7 @@ Marketing website for [Climbora Digital](https://climboradigital.com) — organi
 
 ## Stack
 
-Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is a single self-contained `.html` file — all CSS and JS inline, nothing to compile.
+Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is one `.html` file with its base styles inline; the design system and interactions are shared through `site.css` and `site.js`.
 
 ## Structure
 
@@ -18,6 +18,11 @@ Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is a
 ├── online-stores.html   Online Stores
 ├── about.html         About / founder
 ├── privacy.html        Privacy policy
+├── links.html          Link-in-bio page for social profiles
+├── 404.html            Page not found
+├── site.css            Shared design system
+├── site.js             Shared interactions
+├── climbora-reel.mp4   Brand video (poster: climbora-reel.jpg)
 ├── favicon.svg
 ├── og-image.png         Social share card (1200×630)
 ├── og-image.svg         Source for og-image.png — re-export the PNG if you edit it
