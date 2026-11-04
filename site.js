@@ -512,3 +512,42 @@
     render();
   });
 })();
+
+// ---------- Pricing tabs ----------
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.price-tab'));
+  if (!tabs.length) return;
+  function show(tab, moveFocus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).classList.toggle('is-active', on);
+    });
+    if (moveFocus) tab.focus();
+  }
+  function fromHash() {
+    var match = tabs.filter(function (t) { return t.getAttribute('href') === window.location.hash; })[0];
+    if (match) { show(match); return true; }
+    return false;
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function (e) {
+      e.preventDefault();
+      show(tab);
+      history.replaceState(null, '', tab.getAttribute('href'));
+    });
+    tab.addEventListener('keydown', function (e) {
+      var step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!step) return;
+      e.preventDefault();
+      var next = tabs[(i + step + tabs.length) % tabs.length];
+      show(next, true);
+      history.replaceState(null, '', next.getAttribute('href'));
+    });
+  });
+  show(tabs[0]);
+  // Links like /pricing#stores open that tab with the packages in view
+  if (fromHash()) document.querySelector('.price-sec').scrollIntoView();
+  window.addEventListener('hashchange', fromHash);
+})();

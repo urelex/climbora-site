@@ -18,6 +18,7 @@ Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is o
 ├── online-stores.html   Online Stores
 ├── about.html         About
 ├── privacy.html        Privacy policy
+├── pricing.html        Packages and prices
 ├── links.html          Link-in-bio page for social profiles
 ├── 404.html            Page not found
 ├── site.css            Shared design system
