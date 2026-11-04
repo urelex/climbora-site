@@ -70,7 +70,7 @@
   });
 
   if (finePointer) {
-    document.querySelectorAll('.service-card, .why-card, .cta-band').forEach(function (el) {
+    document.querySelectorAll('.service-card, .why-card').forEach(function (el) {
       el.addEventListener('pointermove', function (e) {
         var r = el.getBoundingClientRect();
         el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
@@ -129,14 +129,7 @@
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  var pointer = { x: -9999, y: -9999, at: -1e9 };
   var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
-
-  window.addEventListener('pointermove', function (e) {
-    pointer.x = e.clientX;
-    pointer.y = e.clientY;
-    pointer.at = performance.now();
-  }, { passive: true });
 
   // ---------- Live topographic map ----------
   // A height field (drifting noise plus one slowly wandering peak) traced
@@ -297,21 +290,6 @@
   var stage = document.querySelector('.hero-stage');
   if (stage && !reduce) {
     scrollers.push(function (y) { stage.style.setProperty('--tilt', (14 * (1 - clamp(y / 520, 0, 1))).toFixed(2)); });
-    if (finePointer) {
-      var tx = 0, ty = 0;
-      (function lean() {
-        requestAnimationFrame(lean);
-        var r = stage.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > window.innerHeight) return;
-        var fresh = performance.now() - pointer.at < 3000;
-        var gx = fresh ? clamp((pointer.x - r.left - r.width / 2) / r.width, -0.6, 0.6) * 5 : 0;
-        var gy = fresh ? clamp((pointer.y - r.top - r.height / 2) / r.height, -0.6, 0.6) * -3 : 0;
-        tx += (gx - tx) * 0.07;
-        ty += (gy - ty) * 0.07;
-        stage.style.setProperty('--tx', tx.toFixed(3));
-        stage.style.setProperty('--ty', ty.toFixed(3));
-      })();
-    }
   }
 
   // Stacking panels: each one shrinks back slightly as the next slides over it

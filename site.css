@@ -780,9 +780,9 @@ header .logo, header .logo span { color: #fff; }
 .offer-hero h1 { font-size: clamp(36px, 5.2vw, 68px); }
 .not-found { padding: calc(var(--hh) + 120px) 0 150px; }
 
-/* The stage tilts flat as you scroll, and leans gently toward the mouse */
+/* The stage tilts flat as you scroll */
 .js-ready .hero-stage {
-  transform: perspective(1500px) rotateX(calc(var(--tilt, 0) * 1deg + var(--ty, 0) * 1deg)) rotateY(calc(var(--tx, 0) * 1deg));
+  transform: perspective(1500px) rotateX(calc(var(--tilt, 0) * 1deg));
   transform-origin: 50% 0;
 }
 .hero-stage { margin-top: 72px; max-width: 1060px; }
@@ -1003,16 +1003,6 @@ header .logo, header .logo span { color: #fff; }
   background: var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 180' preserveAspectRatio='none'%3E%3Cpath d='M0 180V120l120-50 90 36 150-84 110 52 140-70 110 60 130-46 120 50 230-40v192z' fill='%23161618'/%3E%3Cpath d='M0 180v-32l160-34 130 26 170-58 140 42 190-50 130 42 280-30v94z' fill='%23202023'/%3E%3C/svg%3E") bottom / 100% 170px no-repeat;
 }
 .cta-band::before { inset: 0 auto 0 0; width: calc(100% + 420px); animation: contour-drift 70s linear infinite; }
-.cta-band::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(255,255,255,0.1), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-.cta-band:hover::after { opacity: 1; }
 .cta-band h2 { font-size: clamp(34px, 5.6vw, 72px); margin-bottom: 18px; }
 .cta-band p { max-width: 560px; font-size: 18px; }
 @media (max-width: 1208px) { .cta-band { margin: 0 24px; } }
@@ -1343,7 +1333,7 @@ footer .btn-primary:hover { background: #E4E4E7; }
 .intro-alt { position: relative; overflow: hidden; isolation: isolate; padding: calc(var(--hh) + 72px) 0 104px; background: var(--ink) var(--contour-dark); color: #fff; }
 .intro-grid { max-width: 1000px; grid-template-columns: 300px 1fr; gap: 72px; }
 .intro-photo { width: 300px; height: 300px; background: #18181B var(--contour-dark); border: 0; }
-.intro-photo svg { width: 150px; height: 150px; }
+.intro-photo .initials { font-size: 84px; color: #fff; }
 .intro-body h1 { font-size: clamp(44px, 7vw, 84px); line-height: 1; letter-spacing: -0.045em; margin-bottom: 12px; }
 .intro-role { color: var(--muted); }
 .intro-body p { color: #D4D4D8; font-size: 17px; }
