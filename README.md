@@ -16,7 +16,7 @@ Static HTML/CSS/JS. No framework, no build step, no dependencies. Each page is o
 ├── organic-content.html  Organic Content
 ├── websites.html        Landing Pages & Websites
 ├── online-stores.html   Online Stores
-├── about.html         About / founder
+├── about.html         About
 ├── privacy.html        Privacy policy
 ├── links.html          Link-in-bio page for social profiles
 ├── 404.html            Page not found

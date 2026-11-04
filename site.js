@@ -65,7 +65,7 @@
       entry.target.classList.toggle('is-paused', !entry.isIntersecting);
     });
   });
-  document.querySelectorAll('.hero, .page-hero, .marquee, .cta-band, .offer-visual, .founder-badge').forEach(function (el) {
+  document.querySelectorAll('.hero, .page-hero, .marquee, .cta-band, .offer-visual, .intro-badge').forEach(function (el) {
     loopIo.observe(el);
   });
 
@@ -139,7 +139,7 @@
   }, { passive: true });
 
   // ---------- Live topographic map ----------
-  // A height field (drifting noise plus a peak that follows the mouse) traced
+  // A height field (drifting noise plus one slowly wandering peak) traced
   // with marching squares, the same way real contour maps are drawn.
   var R = new Float32Array(65536);
   for (var n = 0; n < 65536; n++) R[n] = Math.random();
@@ -179,11 +179,8 @@
     }
 
     function draw(t) {
-      var rect = host.getBoundingClientRect();
-      var mx = pointer.x - rect.left, my = pointer.y - rect.top;
-      var live = !reduce && performance.now() - pointer.at < 4000 && mx > 0 && my > 0 && mx < w && my < h;
-      var tx = live ? mx : w * (0.5 + 0.34 * Math.sin(t * 0.13));
-      var ty = live ? my : h * (0.34 + 0.2 * Math.cos(t * 0.17));
+      var tx = w * (0.5 + 0.34 * Math.sin(t * 0.13));
+      var ty = h * (0.34 + 0.2 * Math.cos(t * 0.17));
       px += (tx - px) * 0.08;
       py += (ty - py) * 0.08;
 
@@ -263,7 +260,7 @@
       if (!on) running = false;
     }).observe(host);
   }
-  document.querySelectorAll('.hero, .page-hero, .founder-alt').forEach(topo);
+  document.querySelectorAll('.hero, .page-hero, .intro-alt').forEach(topo);
 
   // ---------- One scroll loop for everything scroll-linked ----------
   var scrollers = [], ticking = false;
