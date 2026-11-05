@@ -131,8 +131,8 @@
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
 
-  // ---------- Live topographic map ----------
-  // A height field (drifting noise plus one slowly wandering peak) traced
+  // ---------- Topographic map ----------
+  // A still height field (layered noise plus one peak) traced
   // with marching squares, the same way real contour maps are drawn.
   var R = new Float32Array(65536);
   for (var n = 0; n < 65536; n++) R[n] = Math.random();
@@ -154,7 +154,7 @@
     host.classList.add('has-topo');
     var g = c.getContext('2d');
     var w = 0, h = 0, dpr = 1, cell = 15, cols = 0, rows = 0, field = null;
-    var px = 0, py = 0, sigma = 190, step = 0.055, running = false, last = 0;
+    var px = 0, py = 0, sigma = 190, step = 0.055;
 
     function size() {
       w = host.clientWidth;
@@ -214,7 +214,7 @@
 
       g.setTransform(dpr, 0, 0, dpr, 0, 0);
       g.clearRect(0, 0, w, h);
-      // Lines glow around the moving peak and fade to a whisper elsewhere
+      // Lines glow around the peak and fade to a whisper elsewhere
       function stroke(buf, near, far, width) {
         var grad = g.createRadialGradient(px, py, 0, px, py, sigma * 2.6);
         grad.addColorStop(0, 'rgba(255,255,255,' + near + ')');
@@ -232,26 +232,9 @@
       stroke(bold, 0.6, 0.15, 1.2);
     }
 
-    function loop(ts) {
-      if (!running) return;
-      requestAnimationFrame(loop);
-      if (ts - last < 33) return;
-      last = ts;
-      draw(ts / 1000);
-    }
-
-    size();
-    if (reduce) {
-      draw(40);
-      new ResizeObserver(function () { size(); draw(40); }).observe(host);
-      return;
-    }
-    new ResizeObserver(size).observe(host);
-    new IntersectionObserver(function (entries) {
-      var on = entries[0].isIntersecting;
-      if (on && !running) { running = true; requestAnimationFrame(loop); }
-      if (!on) running = false;
-    }).observe(host);
+    function render() { size(); draw(40); }
+    render();
+    new ResizeObserver(render).observe(host);
   }
   document.querySelectorAll('.hero, .page-hero, .intro-alt').forEach(topo);
 
